@@ -1,0 +1,58 @@
+.toggle-button {
+  width: 220px;
+  height: 100px;
+  background: linear-gradient(to right, pink 50%, yellow 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  border-radius: 25px;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 10px;
+  box-sizing: border-box;
+  transition: all 0.5s ease;
+  border: 2px solid black;
+  box-shadow: 2px 2px 0px 0px black;
+  overflow: hidden;
+}
+
+.toggle-button .text {
+  font-size: 40px;
+  font-weight: bold;
+  position: absolute;
+  left: 10px;
+  transition: left 0.5s ease;
+}
+
+.toggle-button .arrow {
+  width: 50px;
+  height: 50px;
+  border-radius: 9999px;
+  background-color: pink;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid black;
+  transition: background-color 0.5s ease;
+  margin-left: 10px;
+}
+
+.toggle-button .arrow::before {
+  content: "➜";
+  font-size: 40px;
+}
+
+.toggle-button:hover {
+  background-position: left bottom;
+  box-shadow: 5px 5px 0px 0px black;
+}
+
+.toggle-button:hover .text {
+  left: calc(40% - 50px); 
+}
+
+.toggle-button:hover .arrow {
+  background-color: yellow;
+}
